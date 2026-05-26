@@ -6,6 +6,7 @@ identity_token "aws" {
 }
 
 deployment "development" {
+  destroy = true
   inputs = {
     regions        = ["us-east-1"]
     role_arn       = "arn:aws:iam::159287534292:role/stacks-TFC-Dev-Env-demo-stacks"
@@ -18,6 +19,7 @@ deployment "development" {
 }
 
 deployment "production" {
+  destroy = true
   inputs = {
     regions        = ["us-east-1", "us-west-1"]
     role_arn       = "arn:aws:iam::159287534292:role/stacks-TFC-Dev-Env-demo-stacks"
